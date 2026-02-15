@@ -49,10 +49,10 @@
 .background p.lyrics{
   background-color: white; 
 
-  position: relative;
-  bottom: 10px; 
-  padding: 0 16px;
+  padding: 0 12px;
   max-width: 90%;
+  text-align: left;
+  border: 10px solid white ;
 }
 
 /* delete */

@@ -5,7 +5,7 @@ import "./index.css";
 function App() {
   const [image, setImage] = useState(null);
   const [lyrics, setLyrics] = useState(
-    "You know me you know that I'm bout whateva/You want with me thats a bet it could go to that level/Ain't squashing nothing bitch is up just had a talk with the devil/The only way this shit gone end you getting hit with that metal",
+    "this that lyrics, long enough to make it to the two fucking lines, and i'm just draggin at this point rn ",
   );
   const [artist, setArtist] = useState("rajgor");
   const [song, setSong] = useState("3 gm Shrooms");

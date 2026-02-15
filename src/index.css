@@ -28,12 +28,18 @@
   background-size: contain;
   
   display: flex;
+  gap: 0;
   flex-direction: column;
   justify-content: flex-end;
 }
 
 .card .lyrics{
-  /* margin-top: auto; */
+  /* font-size: 15px ; */
+  background-color: white; 
+  
+  display: inline-block; 
+  padding: 0 16px;
+  max-width: 90%;
 }
 
 /* delete */

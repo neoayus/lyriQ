@@ -68,8 +68,12 @@ button:focus-visible {
 } */
 
 .container{
-  width: 40vw; 
-  height: 40vh ; 
-  background-color: pink;
+  width: 500px; 
+  height: 500px; 
+
+  background-color: grey;
   text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }

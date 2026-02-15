@@ -10,24 +10,22 @@ function App() {
       <div
         className="container"
         style={{
-          overflow: "hidden", 
+          overflow: "hidden",
           backgroundImage: `url(${image})`,
         }}
       >
-        <p> imma div </p>
-
         {/* The accept attribute value is a string that defines the file types the file input should accept. */}
-        <input
-          type="file"
-          accept=".png, .jpeg, .jpg"
-          // value={image}
-          onChange={(e) => {
-            const file = e.target.files[0];
-            if (file) {
-              setImage(URL.createObjectURL(file));
-            }
-          }}
-        />
+      <input
+        type="file"
+        accept=".png, .jpeg, .jpg"
+        // value={image} this is a browser level exception and is disabled for security reasons
+        onChange={(e) => {
+          const file = e.target.files[0];
+          if (file) {
+            setImage(URL.createObjectURL(file));
+          }
+        }}
+      />
       </div>
     </>
   );

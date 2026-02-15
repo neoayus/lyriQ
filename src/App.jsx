@@ -3,12 +3,11 @@ import { useState } from "react";
 import "./index.css";
 
 function App() {
-  const [image, setImage] = useState("/doom.png");
-  const [lyrics, setLyrics] = useState(
-    "aake mera chain cheen le sangeeta, tu kahe to rozz liikhu kavita! ",
-  );
-  const [artist, setArtist] = useState("rajgor");
-  const [song, setSong] = useState("3 gm Shrooms");
+  // const [image, setImage] = useState("/doom.png");
+  const [image, setImage] = useState(null);
+  const [lyrics, setLyrics] = useState("aake mera chain cheen le sangeeta, tu kahe to rozz liikhu kavita!");
+  const [artist, setArtist] = useState("");
+  const [song, setSong] = useState("");
 
   return (
     <>
@@ -16,6 +15,15 @@ function App() {
 
       {/* lyrics card */}
       <div className="card">
+
+      {/* ################################################*/}
+      {/* Conditionally Rendering this shytt */}
+      {!image ? 
+        <div className="import-screen"> 
+          <Import />
+          <p>Add an Image</p>
+        </div> 
+          :
         <div
           className="background"
           style={{
@@ -24,6 +32,8 @@ function App() {
         >
           <p className="lyrics"> {lyrics} </p>
         </div>
+      } 
+      {/* ################################################*/}
 
         <div className="card-footer">
           <p className="song-info">
@@ -112,4 +122,19 @@ function Logo() {
       />
     </svg>
   );
+}
+
+function Import(){
+  return(
+    <svg 
+      className="logo import"
+      height="25" 
+      viewBox="0 0 18 15" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M6.03438 0.5C5.45 0.5 4.90313 0.79375 4.57813 1.27813L3.76563 2.5H2C0.896875 2.5 0 3.39688 0 4.5V12.5C0 13.6031 0.896875 14.5 2 14.5H14C15.1031 14.5 16 13.6031 16 12.5V4.5C16 3.39688 15.1031 2.5 14 2.5H12.2344L11.4219 1.27813C11.0969 0.79375 10.55 0.5 9.96563 0.5H6.03438ZM5.825 2.1125C5.87187 2.04375 5.95 2 6.03438 2H9.9625C10.0469 2 10.125 2.04063 10.1719 2.1125L11.2094 3.66875C11.35 3.87812 11.5813 4.00313 11.8344 4.00313H14C14.275 4.00313 14.5 4.22813 14.5 4.50313V12.5031C14.5 12.7781 14.275 13.0031 14 13.0031L2 13C1.725 13 1.5 12.775 1.5 12.5V4.5C1.5 4.225 1.725 4 2 4H4.16563C4.41563 4 4.65 3.875 4.79062 3.66563L5.82813 2.10938L5.825 2.1125ZM8 11.5C9.93438 11.5 11.5 9.93438 11.5 8C11.5 6.06563 9.93438 4.5 8 4.5C6.06562 4.5 4.5 6.06563 4.5 8C4.5 9.93438 6.06562 11.5 8 11.5ZM6 8C6 6.89688 6.89688 6 8 6C9.10313 6 10 6.89688 10 8C10 9.10313 9.10313 10 8 10C6.89688 10 6 9.10313 6 8Z" fill="currentColor"/>
+      <path d="M14 0.25C14.3751 0.25 14.6787 0.553586 14.6787 0.928711V2.82129H16.5713C16.9464 2.82129 17.25 3.12488 17.25 3.5C17.25 3.87512 16.9464 4.17871 16.5713 4.17871H14.6787V6.07129C14.6787 6.44641 14.3751 6.75 14 6.75C13.6249 6.75 13.3213 6.44641 13.3213 6.07129V4.17871H11.4287C11.0536 4.17871 10.75 3.87512 10.75 3.5C10.75 3.12488 11.0536 2.82129 11.4287 2.82129H13.3213V0.928711C13.3213 0.553586 13.6249 0.25 14 0.25Z" fill="currentColor" stroke="#D0D0D0" stroke-width="0.5"/>
+    </svg>
+  )
 }

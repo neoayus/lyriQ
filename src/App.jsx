@@ -5,7 +5,7 @@ import "./index.css";
 function App() {
   const [image, setImage] = useState(null);
   const [lyrics, setLyrics] = useState(
-    "this that lyrics, long enough to make it to the two fucking lines, and i'm just draggin at this point rn ",
+    "this that lyrics, long enough to make it to the two fucking lines, and i'm just draggin at",
   );
   const [artist, setArtist] = useState("rajgor");
   const [song, setSong] = useState("3 gm Shrooms");

@@ -5,7 +5,7 @@ import "./index.css";
 function App() {
   // const [image, setImage] = useState("/doom.png");
   const [image, setImage] = useState(null);
-  const [lyrics, setLyrics] = useState("aake mera chain cheen le sangeeta, tu kahe to rozz liikhu kavita!");
+  const [lyrics, setLyrics] = useState("");
   const [artist, setArtist] = useState("");
   const [song, setSong] = useState("");
 
@@ -16,8 +16,7 @@ function App() {
       {/* lyrics card */}
       <div className="card">
 
-      {/* ################################################*/}
-      {/* Conditionally Rendering this shytt */}
+      {/* Conditionally Render this */}
       {!image ? 
         <div className="import-screen"> 
           <Import />
@@ -33,12 +32,12 @@ function App() {
           <p className="lyrics"> {lyrics} </p>
         </div>
       } 
-      {/* ################################################*/}
 
         <div className="card-footer">
           <p className="song-info">
-            {" "}
-            {artist}, "{song}"{" "}
+            {(artist || song) ? 
+              `${artist}, "${song}"` : ""  
+            }
           </p>
           <Logo />
         </div>

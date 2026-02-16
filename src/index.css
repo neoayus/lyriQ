@@ -97,6 +97,11 @@
   padding: 0 12px;
 }
 
+.logo.lyriq{
+  color: white ; 
+  height: 80% ;
+}
+
 form{
   margin-top: 40px;
 
@@ -106,10 +111,6 @@ form{
   /* color: black ; */
 }
 
-.logo.lyriq{
-  color: white ; 
-  height: 80% ;
-}
 
 .logo.import{
   color: black;

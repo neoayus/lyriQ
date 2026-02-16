@@ -111,7 +111,7 @@ form fieldset{
   display: flex; 
   flex-direction: column;
   gap: 20px;
-  /* color: black ; */
+  
 }
 
 form fieldset label{
@@ -121,10 +121,37 @@ form fieldset label{
   align-items: center;
 }
 
-form fieldset label input,textarea{
+form label input,textarea{
   flex: 1; 
+  border: 0;
+  border-bottom: .8px solid #d0d0d0;
 }
 
+form label input,textarea:focus{
+  /* border: .8px solid #d0d0d0; */
+  outline: none;
+  border: .2px solid  #d0d0d0; 
+  border-bottom: 0;
+}
+
+form label input[type="file"]{
+  border: none; 
+  color: transparent;
+}
+
+form label input[type="file"]::file-selector-button {
+  padding: 8px 16px;
+  border: none;
+  background: #d0d0d0;
+  color: rgb(80, 80, 80);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form label input[type="file"]::file-selector-button:active{
+  color: #d0d0d0;
+  background-color: rgb(80, 80, 80);
+}
 
 .logo.import{
   color: black;

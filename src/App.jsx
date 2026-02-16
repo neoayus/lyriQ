@@ -65,7 +65,7 @@ function App() {
 
           {/* set song: */}
             <label>
-              set lyrics :
+              Lyrics :
               <textarea
                 type="text"
                 placeholder="here geos Lyrics..."

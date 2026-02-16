@@ -8,6 +8,7 @@ function App() {
   const [lyrics, setLyrics] = useState("");
   const [artist, setArtist] = useState("");
   const [song, setSong] = useState("");
+  // Tu aake mera chain cheen le sangeeta, tu kahe to rozz likhu kaveeta :3 
 
   return (
     <>
@@ -43,40 +44,59 @@ function App() {
         </div>
       </div>
 
-      <form>
-        {/* Select Image */}
-        <input
-          type="file"
-          accept=".png, .jpeg, .jpg"
-          onChange={(e) => {
-            const file = e.target.files[0];
-            if (file) {
-              setImage(URL.createObjectURL(file));
-            }
-          }}
-        />
+      <form className="form">
+        <fieldset>
+            <legend> lyrics card (i) </legend>
+          
+          {/* set image: */}
+            <label>
+              choose image :
+              <input
+                type="file"
+                accept=".png, .jpeg, .jpg"
+                onChange={(e) => {
+                  const file = e.target.files[0];
+                  if (file) {
+                    setImage(URL.createObjectURL(file));
+                  }
+                }}
+            />
+            </label>
 
-        {/* Set Lyrics */}
-        <input
-          type="text"
-          placeholder="Set Lyrics..."
-          value={lyrics}
-          onChange={(e) => setLyrics(e.target.value)}
-        />
-        {/* Set Artist Name */}
-        <input
-          type="text"
-          placeholder="Artist Name"
-          value={artist}
-          onChange={(e) => setArtist(e.target.value)}
-        />
-        {/* Set Song Name */}
-        <input
-          type="text"
-          placeholder="Song Name"
-          value={song}
-          onChange={(e) => setSong(e.target.value)}
-        />
+          {/* set song: */}
+            <label>
+              set lyrics :
+              <textarea
+                type="text"
+                placeholder="here geos Lyrics..."
+                rows="3"
+                value={lyrics}
+                onChange={(e) => setLyrics(e.target.value)}
+              />
+            </label>
+
+          {/* set song: */}
+            <label>
+              Artist Name :
+              <input
+                type="text"
+                placeholder="Artist"
+                value={artist}
+                onChange={(e) => setArtist(e.target.value)}
+              />
+            </label>
+
+          {/* set song: */}
+            <label>
+              Song Name :
+              <input
+                type="text"
+                placeholder="Song"
+                value={song}
+                onChange={(e) => setSong(e.target.value)}
+              />
+            </label>
+        </fieldset>
       </form>
     </>
   );

@@ -99,16 +99,30 @@
 
 .logo.lyriq{
   color: white ; 
-  height: 80% ;
+  height: 60% ;
 }
 
-form{
+form fieldset{
+  width: 95vw; 
+  /* height: 500px;  */
+  
   margin-top: 40px;
 
   display: flex; 
   flex-direction: column;
   gap: 20px;
   /* color: black ; */
+}
+
+form fieldset label{
+  display: flex;
+  gap: 20px;
+
+  align-items: center;
+}
+
+form fieldset label input,textarea{
+  flex: 1; 
 }
 
 

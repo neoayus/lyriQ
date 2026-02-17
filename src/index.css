@@ -19,7 +19,7 @@
 *{
   box-sizing: border-box;
   font-family: "Questrial", sans-serif;
-  margin: 0; 
+  margin: 0 ; 
   /* color: white;  */
   /* font-style: normal; */
   /* font-weight: 400; */
@@ -34,6 +34,8 @@
   display: flex; 
   flex-direction: column;
   justify-content: flex-end;
+  
+  margin: 20px auto ; 
 }
 
 .background{
@@ -112,6 +114,7 @@ form fieldset{
   display: flex; 
   flex-direction: column;
   gap: 20px;
+  margin: 0 auto ; 
   
 }
 
@@ -172,7 +175,7 @@ button{
 
 button.download{
   display: block;
-  margin-left: auto ; 
+  margin-left: auto;
 }
 
 /* Navbar.jsx */

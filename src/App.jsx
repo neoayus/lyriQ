@@ -37,11 +37,10 @@ function App() {
   
   return (
     <>
-      {/* FEAT: Add Nav Bar  */}
       <Navbar /> 
+      <LyricsCard image={image} lyrics={lyrics} artist={artist} song={song} ref={card2export}/>
 
-      {/* <LyricsCard image={image} lyrics={lyrics} artist={artist} song={song} ref={card2export}/> */}
-      {/* <br />
+      <br />
       <button onClick={handleDownload} className="download">Download!</button>
       <br />
 
@@ -53,7 +52,7 @@ function App() {
         setLyrics={setLyrics}
         setArtist={setArtist}
         setSong={setSong}
-      /> */}
+      />
 
     </>
   );

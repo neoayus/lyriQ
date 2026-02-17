@@ -102,6 +102,7 @@ function AddInfo({ song, artist, lyrics, setSong, setArtist, setLyrics, setImage
           <input
             type="file"
             accept=".png, .jpeg, .jpg"
+            // ERROR : image can't be exported with html-to-image with blobURL, hence, it's need to be converted to base64 first.
             onChange={(e) => {
               const file = e.target.files[0];
               if (file) {

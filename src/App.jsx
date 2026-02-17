@@ -25,7 +25,9 @@ function App() {
         const link = document.createElement('a');
         link.download = 'lyriq-card.png'; // specify file name on download  
         link.href = imageURL; // donwload url, from toPng function 
-        link.click() // trigger aclick on this element
+
+        // make download conditional, to only run when there's an image
+        image && link.click() // trigger aclick on this element
       })
       .catch((err)=>{{
         console.log(err);

@@ -157,3 +157,14 @@ form label input[type="file"]::file-selector-button:active{
   color: black;
   height: 25px;
 }
+
+/* button */
+button{
+  padding: 8px 16px;
+  border: none;
+  background: #d0d0d0;
+  color: black;
+  border: .7px  solid #898989;
+  border-radius: 6px;
+  cursor: pointer;
+}

@@ -1,9 +1,12 @@
 // import style
-import { useState } from "react";
+import { useEffect, useEffectEvent, useRef, useState } from "react";
 import "./index.css";
 
 // import Components
 import { Logo, Import } from "./components/SVGs";
+
+// import library function to export lyric card 
+import { toPng } from 'html-to-image';
 
 function App() {
   const [image, setImage] = useState(null);
@@ -11,10 +14,18 @@ function App() {
   const [artist, setArtist] = useState("");
   const [song, setSong] = useState("");
 
+  function handleDownload(){
+    console.log("download is initiated!");
+  }
   return (
     <>
       <p>lyriQ</p>
       <LyricsCard image={image} lyrics={lyrics} artist={artist} song={song} />
+
+      <br />
+      <button onClick={handleDownload}>Download!</button>
+      <br />
+
       <AddInfo
         lyrics={lyrics}
         artist={artist}
@@ -33,8 +44,15 @@ function App() {
 export default App;
 
 function LyricsCard({ image, lyrics, artist, song }) {
+
+  const card2export  = useRef(null);
+
+  // useEffect(function(){
+  //   console.log(card2export.current);
+  // },[])
+
   return (
-    <div className="card">
+    <div className="card" ref={card2export}>
       {/* Conditionally Render this */}
       {!image ? (
         <div className="import-screen">

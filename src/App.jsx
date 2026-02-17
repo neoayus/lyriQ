@@ -9,18 +9,29 @@ import { Logo, Import } from "./components/SVGs";
 import { toPng } from 'html-to-image';
 
 function App() {
+
+  // hooks: 
   const [image, setImage] = useState(null);
   const [lyrics, setLyrics] = useState("");
   const [artist, setArtist] = useState("");
   const [song, setSong] = useState("");
 
-  // hooks: 
   const card2export  = useRef(null);
 
   function handleDownload(){
-    console.log("download is initiated!");    
-    console.log(card2export);
+    console.log(card2export.current);
+    toPng(card2export.current, {cacheBust: true})
+      .then((imageURL)=>{
+        const link = document.createElement('a');
+        link.download = 'lyriq-card.png';
+        link.href = imageURL;
+        link.click()
+      })
+      .catch((err)=>{{
+        console.log(err);
+      }})
   }
+  
   return (
     <>
       <p>lyriQ</p>

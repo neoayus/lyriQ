@@ -23,9 +23,9 @@ function App() {
     toPng(card2export.current, {cacheBust: true})
       .then((imageURL)=>{
         const link = document.createElement('a');
-        link.download = 'lyriq-card.png';
-        link.href = imageURL;
-        link.click()
+        link.download = 'lyriq-card.png'; // specify file name on download  
+        link.href = imageURL; // donwload url, from toPng function 
+        link.click() // trigger aclick on this element
       })
       .catch((err)=>{{
         console.log(err);

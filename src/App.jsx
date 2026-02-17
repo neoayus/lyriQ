@@ -40,9 +40,7 @@ function App() {
       <Navbar /> 
       <LyricsCard image={image} lyrics={lyrics} artist={artist} song={song} ref={card2export}/>
 
-      <br />
       <button onClick={handleDownload} className="download">Download!</button>
-      <br />
 
       <AddInfo
         lyrics={lyrics}

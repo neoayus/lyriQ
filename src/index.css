@@ -176,6 +176,7 @@ button{
 button.download{
   display: block;
   margin-left: auto;
+  margin-right: 15px;
 }
 
 /* Navbar.jsx */

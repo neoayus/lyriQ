@@ -14,13 +14,17 @@ function App() {
   const [artist, setArtist] = useState("");
   const [song, setSong] = useState("");
 
+  // hooks: 
+  const card2export  = useRef(null);
+
   function handleDownload(){
-    console.log("download is initiated!");
+    console.log("download is initiated!");    
+    console.log(card2export);
   }
   return (
     <>
       <p>lyriQ</p>
-      <LyricsCard image={image} lyrics={lyrics} artist={artist} song={song} />
+      <LyricsCard image={image} lyrics={lyrics} artist={artist} song={song} ref={card2export}/>
 
       <br />
       <button onClick={handleDownload}>Download!</button>
@@ -43,16 +47,11 @@ function App() {
 
 export default App;
 
-function LyricsCard({ image, lyrics, artist, song }) {
-
-  const card2export  = useRef(null);
-
-  // useEffect(function(){
-  //   console.log(card2export.current);
-  // },[])
+function LyricsCard({ image, lyrics, artist, song, ref}) {
 
   return (
-    <div className="card" ref={card2export}>
+    <div className="card" ref={ref}>
+
       {/* Conditionally Render this */}
       {!image ? (
         <div className="import-screen">

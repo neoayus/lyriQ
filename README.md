@@ -1,13 +1,7 @@
-Bet, we finna level this README up real clean. I added the technical explanation about `html-to-image`, the base64 conversion with `FileReader`, and a proper “Future Improvements” section so it look like a serious evolving project.
+# [LyriQ](https://lyriqs.netlify.app/)
 
-Here’s your updated `README.md`:
-
----
-
-# LyriQ
-
-A simple web app inspired by the Genius.com Android app that lets users create custom lyric cards.
-
+A simple MVP app inspired by the Genius.com Android app that lets users create custom lyric cards.
+[Click Here](https://lyriqs.netlify.app/) to launch the app on netlify!
 ---
 
 ## Why Create This When Genius.com Exists?

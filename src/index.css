@@ -223,3 +223,51 @@ button.download{
 .navbar span.sign-up:hover{
   text-decoration: underline;
 }
+
+.nav-menu{
+  height: calc(100vh - 52px);
+  background-color: #d0d0d0;
+  font-size: 18px;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.list{
+  list-style-type: none;
+  padding-top: 30px; 
+}
+
+.sticky-nav{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  
+  margin-top: auto; 
+  padding: 20px 0; 
+  border-top: 1px solid rgb(177, 177, 177) ;
+}
+
+ul > li {
+  padding: 14px 10px; 
+  border-bottom: .8px solid #959595;
+}
+
+ul > li:hover{
+  border-bottom: none;
+  border-top: .8px solid #959595;
+  border-left: .8px solid #959595;
+}
+
+.icon.cross{
+  height: 18px; 
+  width: 18px;   
+}
+
+.icon.github{
+  height: 40px;   
+  width: 40px;   
+  padding-right: 10px; 
+}
+
+

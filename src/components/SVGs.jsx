@@ -73,14 +73,14 @@ export function Hamburger() {
       <path
         d="M2 12H16"
         stroke="black"
-        stroke-width="1.2"
+        strokeWidth="1.2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M2 5H16"
         stroke="black"
-        stroke-width="1.2"
+        strokeWidth="1.2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />

@@ -19,7 +19,7 @@ function App() {
   const card2export  = useRef(null);
 
   function handleDownload(){
-    console.log(card2export.current);
+    // console.log(card2export.current);
     toPng(card2export.current, {cacheBust: true})
       .then((imageURL)=>{
         const link = document.createElement('a');
@@ -38,7 +38,7 @@ function App() {
       <LyricsCard image={image} lyrics={lyrics} artist={artist} song={song} ref={card2export}/>
 
       <br />
-      <button onClick={handleDownload}>Download!</button>
+      <button onClick={handleDownload} className="download">Download!</button>
       <br />
 
       <AddInfo
@@ -110,11 +110,11 @@ function AddInfo({ song, artist, lyrics, setSong, setArtist, setLyrics, setImage
               const fileObject = e.target.files[0];
               if(!fileObject) return ; 
               
-              const reader = new FileReader(); 
-              reader.onload =() => {
-                setImage(reader.result);
+              const reader = new FileReader();  // create a file reader 
+              reader.onload =() => { // callback function to run after the file has been fully read (async) operation
+                setImage(reader.result); // update image state
               }
-              reader.readAsDataURL(fileObject);
+              reader.readAsDataURL(fileObject); // read the file as data url 
             }}
           />
         </label>

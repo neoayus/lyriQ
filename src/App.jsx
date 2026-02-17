@@ -1,9 +1,10 @@
 // import style
-import { useEffect, useEffectEvent, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "./index.css";
 
 // import Components
 import { Logo, Import } from "./components/SVGs";
+import Navbar from './components/Navbar';
 
 // import library function to export lyric card 
 import { toPng } from 'html-to-image';
@@ -36,10 +37,11 @@ function App() {
   
   return (
     <>
-      <p>lyriQ</p>
-      <LyricsCard image={image} lyrics={lyrics} artist={artist} song={song} ref={card2export}/>
+      {/* FEAT: Add Nav Bar  */}
+      <Navbar /> 
 
-      <br />
+      {/* <LyricsCard image={image} lyrics={lyrics} artist={artist} song={song} ref={card2export}/> */}
+      {/* <br />
       <button onClick={handleDownload} className="download">Download!</button>
       <br />
 
@@ -51,9 +53,8 @@ function App() {
         setLyrics={setLyrics}
         setArtist={setArtist}
         setSong={setSong}
-      />
+      /> */}
 
-      {/* lyrics card */}
     </>
   );
 }

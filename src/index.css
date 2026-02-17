@@ -192,6 +192,11 @@ button.download{
   padding: 0 14px; 
 }
 
+.navbar .icon.hamburger{
+  height: 24px; 
+  width: 24px; 
+}
+
 .navbar span.lyriq{
   font-size: 20px; 
 }

@@ -225,7 +225,9 @@ button.download{
 }
 
 .nav-menu{
-  height: calc(100vh - 52px);
+  height: calc(100dvh - 52px);
+  /* dvh: dynamic viewport height, and it's included cause vh on mobile sometimes contain the address bar which makes vh inconsistent and is messing up with my layout */ 
+
   background-color: #d0d0d0;
   font-size: 18px;
   

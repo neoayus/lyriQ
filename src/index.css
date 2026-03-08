@@ -87,6 +87,7 @@
   text-align: left;
 
   display: inline-block;
+  height: fit-content;
   width: fit-content;
   margin: 0px 0px 12px 0px ; 
   padding: 4px 8px; 

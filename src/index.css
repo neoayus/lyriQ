@@ -83,13 +83,24 @@
 }
 
 .background p.lyrics{
-  background-color: white; 
+  background-color: white;
+  text-align: left;
+
+  display: inline-block;
+  width: fit-content;
+  margin: 0px 0px 12px 0px ; 
+  padding: 4px 8px; 
+  
+  white-space: pre-line;
+
+
+  /* background-color: white; 
 
   padding: 0 12px;
-  max-width: 90%;
   text-align: left;
   border: 10px solid white ;
-  margin-bottom: 10px;
+  margin-bottom: 10px; */
+
   z-index: 1; 
 }
 

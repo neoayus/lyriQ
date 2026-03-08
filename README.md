@@ -1,12 +1,10 @@
-# [LyriQ](https://lyriqs.netlify.app/)
+# LyriQ
 
----
 A simple MVP app inspired by the Genius.com Android app that lets users create custom lyric cards.
-[Click Here](https://lyriqs.netlify.app/) to launch the app on netlify!
----
+Live App : [lyriq@netlify](https://lyriqs.netlify.app/)
 
 
-## Why Create This When Genius.com Exists?
+## Why Create This When Genius.com Already Exist?
 
 You can't create lyric cards on genius.com web — only on the Android app.
 Not every song has lyrics available on Genius.

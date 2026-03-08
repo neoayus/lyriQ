@@ -20,6 +20,7 @@
   box-sizing: border-box;
   font-family: "Questrial", sans-serif;
   margin: 0 ; 
+  padding: 0 ;
   /* color: white;  */
   /* font-style: normal; */
   /* font-weight: 400; */
@@ -35,7 +36,7 @@
   flex-direction: column;
   justify-content: flex-end;
   
-  margin: 20px auto ; 
+  /* margin: 0px auto ;  */
 }
 
 .background{
@@ -273,3 +274,15 @@ ul > li:hover{
 }
 
 
+/* FIX: Downloded Card having hidden margin */
+.page{
+  display: flex; 
+   
+  flex-direction: column;
+  gap: 20px; 
+  justify-content: center;
+  align-items: center;
+  
+  margin-top: 20px; 
+
+}

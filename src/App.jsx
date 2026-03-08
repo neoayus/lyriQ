@@ -38,19 +38,23 @@ function App() {
   return (
     <>
       <Navbar /> 
-      <LyricsCard image={image} lyrics={lyrics} artist={artist} song={song} ref={card2export}/>
 
-      <button onClick={handleDownload} className="download">Download!</button>
+      <div className="page">
+        <LyricsCard image={image} lyrics={lyrics} artist={artist} song={song} ref={card2export}/>
 
-      <AddInfo
-        lyrics={lyrics}
-        artist={artist}
-        song={song}
-        setImage={setImage}
-        setLyrics={setLyrics}
-        setArtist={setArtist}
-        setSong={setSong}
-      />
+        <button onClick={handleDownload} className="download">Download!</button>
+
+        <AddInfo
+          lyrics={lyrics}
+          artist={artist}
+          song={song}
+          setImage={setImage}
+          setLyrics={setLyrics}
+          setArtist={setArtist}
+          setSong={setSong}
+        />
+
+      </div>
 
     </>
   );
